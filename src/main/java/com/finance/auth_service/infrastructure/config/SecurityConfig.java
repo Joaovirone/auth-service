@@ -1,4 +1,4 @@
-package com.finance.auth.infrastructure.security.config;
+package com.finance.auth_service.infrastructure.config;
 
 // IMPORTS OBRIGATÓRIOS (Sem eles o código fica vermelho)
 import org.springframework.context.annotation.Bean;
