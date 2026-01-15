@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  auth-db:
+    image: postgres:15-alpine
+    container_name: auth-service-db
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB:auth_db
+
+    ports:
+      -5001:5432
+    volumes:
+      -postgres_auth_data:/var/lib/postgresql/data
+    
+    networks:
+      - finance-network
+
+networks:
+  finance-network:
+    driver: bridge
+
+volumes:
+  postgres_auth_data
